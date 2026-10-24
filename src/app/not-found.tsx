@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <div className="page-wrap" style={{textAlign:"center",paddingTop:100,paddingBottom:130}}><div className="eyebrow section-label">404 · A gap in the archives</div><h1 className="page-title">Even this page<br/>made a bad decision.</h1><p className="page-intro" style={{margin:"15px auto 28px"}}>The exhibit you seek appears to have wandered off. We have notified Sir Regret.</p><Link className="button button-dark" href="/museum">Return to the museum →</Link></div>}

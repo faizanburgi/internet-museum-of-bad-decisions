@@ -1,0 +1,5 @@
+import { NextResponse } from "next/server";
+import { z } from "zod";
+import { adminDb } from "@/lib/supabase";
+const schema=z.object({reason:z.string().trim().min(8).max(500)});
+export async function POST(request:Request,{params}:{params:Promise<{id:string}>}){const {id}=await params;let body:unknown;try{body=await request.json()}catch{return NextResponse.json({error:"Invalid request."},{status:400})}const parsed=schema.safeParse(body);if(!parsed.success)return NextResponse.json({error:"Please include a short report reason."},{status:400});if(!adminDb)return NextResponse.json({error:"Reporting is unavailable while the archives are offline."},{status:503});const exhibit=await adminDb.from("exhibits").select("id").eq("id",id).eq("status","approved").maybeSingle();if(!exhibit.data)return NextResponse.json({error:"Exhibit not found."},{status:404});const {error}=await adminDb.from("reports").insert({exhibit_id:id,reason:parsed.data.reason,status:"open"});if(error)return NextResponse.json({error:"The report could not be filed."},{status:500});return NextResponse.json({ok:true})}

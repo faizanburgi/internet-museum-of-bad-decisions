@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorPage({reset}:{reset:()=>void}){return <div className="page-wrap" style={{textAlign:"center",paddingTop:100,paddingBottom:130}}><div className="eyebrow section-label">Unexpected incident</div><h1 className="page-title">An unprecedented<br/>administrative embarrassment.</h1><p className="page-intro" style={{margin:"15px auto 28px"}}>The archives encountered a problem. The curators have been informed.</p><button className="button button-dark" onClick={reset}>Try again →</button></div>}
