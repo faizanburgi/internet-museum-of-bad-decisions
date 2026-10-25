@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" fill="none">
+  <defs>
+    <linearGradient id="marble" x1="98" y1="57" x2="310" y2="438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff7e7"/><stop offset=".38" stop-color="#d9c9aa"/><stop offset=".7" stop-color="#f1e4cc"/><stop offset="1" stop-color="#a58e6c"/>
+    </linearGradient>
+    <linearGradient id="shadow" x1="204" y1="90" x2="247" y2="330" gradientUnits="userSpaceOnUse"><stop stop-color="#775e45" stop-opacity=".05"/><stop offset="1" stop-color="#55402d" stop-opacity=".46"/></linearGradient>
+    <filter id="grain"><feTurbulence baseFrequency=".72" numOctaves="2" seed="17" type="fractalNoise"/><feColorMatrix values=".55 0 0 0 .35 .55 0 0 0 .29 .55 0 0 0 .21 0 0 0 .11 0"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  </defs>
+  <path d="M84 442c9-41 30-66 67-79l29-11-3-41c-22-10-38-29-47-53-13-8-21-21-20-34 1-11 7-18 17-21-8-47 5-102 41-125 29-19 81-18 111 3 34 24 43 75 32 122 10 4 15 13 14 24-1 13-10 25-22 31-9 31-25 50-49 59v37l29 10c37 13 57 38 66 78H84Z" fill="url(#marble)" stroke="#8e7758" stroke-width="3"/>
+  <path d="M184 312c10 13 23 19 41 19 17 0 31-6 43-18v33c-11 21-25 32-43 32-19 0-34-11-44-33l3-33Z" fill="url(#shadow)"/>
+  <path d="M148 194c11-14 27-20 45-16m25 0c19-4 37 1 51 14M158 201c9-4 18-5 28-3m40-1c11-3 21-2 31 3" stroke="#745f49" stroke-linecap="round" stroke-width="5"/>
+  <path d="M190 201c4 4 8 5 12 2m25-2c4 4 9 4 13 0" stroke="#4d3a2e" stroke-linecap="round" stroke-width="3"/>
+  <path d="M210 204c-2 18-9 31-12 42-2 8 7 11 17 9m-35 19c16 8 36 8 53-1" stroke="#80694f" stroke-linecap="round" stroke-width="4"/>
+  <path d="M108 434c20-23 52-34 94-34 43 0 74 11 94 34M154 368l-8 66m99-67 9 67" stroke="#927959" stroke-opacity=".55" stroke-width="4"/>
+  <path d="M119 119c-8 51-8 83 1 108m37-175c-12 22-17 44-16 65m149-45c13 25 17 53 13 81m34-9c-5 24-7 44-4 61" stroke="#fff9eb" stroke-opacity=".58" stroke-linecap="round" stroke-width="4"/>
+  <g filter="url(#grain)" opacity=".22"><path d="M84 442c9-41 30-66 67-79l29-11-3-41c-22-10-38-29-47-53-13-8-21-21-20-34 1-11 7-18 17-21-8-47 5-102 41-125 29-19 81-18 111 3 34 24 43 75 32 122 10 4 15 13 14 24-1 13-10 25-22 31-9 31-25 50-49 59v37l29 10c37 13 57 38 66 78H84Z" fill="#fff"/></g>
+</svg>

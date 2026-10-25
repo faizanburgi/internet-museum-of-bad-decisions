@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 function Brand() {
-  return <Link className="brand" href="/" aria-label="Internet Museum home"><span className="brand-stamp">♜</span><span>THE INTERNET MUSEUM<br/>OF BAD DECISIONS</span></Link>;
+  return <Link className="brand" href="/" aria-label="Internet Museum home"><span className="brand-stamp" aria-hidden="true">♜</span><span>THE INTERNET MUSEUM<br/>OF BAD DECISIONS</span></Link>;
 }
 
 export function SiteHeader() {
