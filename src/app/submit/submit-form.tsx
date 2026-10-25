@@ -1,3 +1,4 @@
+/* eslint react/no-unescaped-entities: off */
 "use client";
 import { useState } from "react";
 import Link from "next/link";

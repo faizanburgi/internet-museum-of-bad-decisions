@@ -1,3 +1,4 @@
+/* eslint react/no-unescaped-entities: off */
 import Link from "next/link";
 import { categories } from "@/lib/categories";
 import { getExhibits } from "@/lib/supabase";

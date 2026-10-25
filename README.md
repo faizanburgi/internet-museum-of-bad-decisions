@@ -33,6 +33,8 @@ npm run build
 npm start
 ```
 
+Before the first browser test run, install Playwright's Chromium binary with `npx playwright install chromium`.
+
 ## Vercel deployment
 
 1. Push this project to a GitHub repository.

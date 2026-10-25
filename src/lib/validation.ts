@@ -6,7 +6,7 @@ export const submissionSchema = z.object({
   category: z.enum(categories.map((item) => item.slug) as [string, ...string[]]),
   displayName: z.string().trim().max(50).optional().default(""),
   anonymous: z.boolean().default(true),
-  consent: z.literal(true, { errorMap: () => ({ message: "Please confirm your story is safe to share." }) }),
+  consent: z.literal(true, { error: "Please confirm your story is safe to share." }),
   title: z.string().trim().max(90).optional().default("")
 });
 

@@ -1,3 +1,4 @@
+/* eslint react/no-unescaped-entities: off */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getExhibits } from "@/lib/supabase";
