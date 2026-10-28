@@ -163,3 +163,20 @@ body{background-image:radial-gradient(ellipse at 50% 10%,#41291820,transparent 5
 .about-copy{color:#e2d4bc;font-family:var(--font-dm-sans),"Segoe UI",sans-serif;font-size:15px;line-height:1.75}.about-copy p{color:inherit}.about-copy h2{font-family:var(--font-pixelify),Pixelify,monospace;color:#f0b45a!important}
 body:has(.museum-carousel)>.site-header .nav{font-family:var(--font-dm-sans),"Segoe UI",sans-serif;font-size:13px;font-weight:600;letter-spacing:.02em;color:#e4c895}
 body:has(.museum-carousel)>.site-header .nav-cta{font-family:var(--font-dm-sans),"Segoe UI",sans-serif;font-size:12px;font-weight:700}
+.verdict-console{position:absolute;z-index:3;left:50%;top:54%;transform:translate(-50%,-50%);width:min(470px,44vw);min-height:190px;padding:26px 30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;background:#20170f;border:1px solid #bd873d;box-shadow:0 0 30px #0008,inset 0 0 0 5px #17120e,inset 0 0 0 6px #93632955}
+.verdict-console>.eyebrow{font:12px var(--font-pixelify),Pixelify,monospace;letter-spacing:.13em;color:#f0b45a}
+.verdict-console>p{margin:0;min-height:2.8em;display:grid;place-items:center;font:clamp(19px,2.4vw,29px)/1.25 var(--font-fraunces),Georgia,serif;color:#fff0d2}
+.verdict-console>button{border:1px solid #ba7c2f;background:#dc9b3d;color:#21160c;padding:10px 15px;font:600 13px var(--font-dm-sans),"Segoe UI",sans-serif;cursor:pointer}
+.verdict-console>button:hover{background:#efb75c}.verdict-console>button:focus-visible{outline-color:#fff0d2}
+.about-sections{display:grid;gap:22px;margin-top:30px;max-width:760px;line-height:1.75}
+.about-sections section{border-left:2px solid #a87939;padding-left:18px}
+.about-sections h2{margin:0 0 8px;font:20px var(--font-pixelify),Pixelify,monospace;color:#f0b45a}
+.about-sections p{margin:0 0 8px}.about-sections ol{margin:0;padding-left:22px}.about-sections li{padding:4px 0}.about-curator blockquote{margin:8px 0 0;color:#f0d7a4;font:italic 18px var(--font-fraunces-italic),Georgia,serif}
+@media(max-width:900px){.verdict-console{width:min(470px,58vw)}}
+@media(max-width:650px){.verdict-console{top:52%;width:82vw;min-height:150px;padding:17px 14px;gap:8px}.verdict-console>.eyebrow{font-size:9px}.verdict-console>p{font-size:20px}.verdict-console>button{font-size:11px;padding:8px 12px}.about-sections{gap:18px;margin-top:22px}}
+.carousel-cover .hero-art,.carousel-cover .regret-orbit,.carousel-cover .bust,.carousel-cover .bust-caption{display:none!important}
+.carousel-cover .verdict-console{top:55%}
+.featured-art{display:grid;place-items:center;background:none!important;filter:none!important;font-size:clamp(76px,10vw,132px);line-height:1;animation:artifact-wobble 4s ease-in-out infinite}
+@keyframes artifact-wobble{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(5deg) translateY(-8px)}}
+@media(max-width:650px){.carousel-cover .verdict-console{top:51%;width:86vw;min-height:138px}.carousel-cover .cover-title{bottom:22%}.featured-art{font-size:82px}}
+@media(prefers-reduced-motion:reduce){.featured-art{animation:none}}

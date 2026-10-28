@@ -2,10 +2,25 @@ import { expect, test } from "@playwright/test";
 
 test("homepage and empty galleries render real museum navigation", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: /THE INTERNET MUSEUM OF BAD DECISIONS/i })).toBeVisible();
-  await page.getByRole("link", { name: "The Museum" }).first().click();
+  await expect(page.getByRole("heading", { name: "BAD DECISIONS" })).toBeVisible();
+  await page.getByRole("link", { name: "Browse Stories" }).first().click();
   await expect(page.getByRole("heading", { name: "The Museum" })).toBeVisible();
   await expect(page.getByText(/public exhibits/i)).toBeVisible();
+});
+
+test("Sir Regret's verdict button is keyboard accessible and updates its announcement", async ({ page }) => {
+  await page.goto("/");
+  const verdict = page.locator(".verdict-console p[aria-live='polite']");
+  const initialVerdict = await verdict.textContent();
+  const button = page.getByRole("button", { name: /Get Sir Regret's verdict/ });
+  await button.focus();
+  await page.keyboard.press("Enter");
+  await expect(verdict).not.toHaveText(initialVerdict || "");
+  await expect(page.locator(".carousel-cover img")).toHaveCount(0);
+  await expect(button).toBeVisible();
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(button).toBeVisible();
 });
 
 test("submission form validates required fields and explains offline archives", async ({ page }) => {
