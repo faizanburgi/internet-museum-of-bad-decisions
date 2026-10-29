@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 360" fill="none">
+  <ellipse cx="222" cy="319" rx="160" ry="20" fill="#523E36" opacity=".14"/>
+  <path d="M281 131h66c35 0 53 26 43 57-8 25-31 39-64 39" stroke="#6A5145" stroke-width="16" stroke-linecap="round"/>
+  <path d="M87 122c12-14 35-21 68-18 51 4 87 1 141 0 20 0 37 5 47 17l-18 132c-4 35-30 54-75 56l-62 1c-48 1-75-18-81-55L87 122Z" fill="#F9E8C8" stroke="#684E43" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M96 127c55 17 170 16 237-1" stroke="#C76954" stroke-width="12" stroke-linecap="round"/>
+  <path d="M107 153c46 11 143 12 215 0" stroke="#91A27A" stroke-width="7" stroke-linecap="round"/>
+  <path d="M166 190c15-28 37-28 53-4 17-21 37-13 47 7-11 21-28 37-52 45-19-6-36-22-48-48Z" fill="#C76954"/>
+  <path d="M194 231c21-14 46-17 70-13" stroke="#684E43" stroke-width="5" stroke-linecap="round"/>
+  <path d="m77 58 9 19 20 3-16 13 5 20-18-11-17 11 4-20-16-13 21-3 8-19Zm258 20 7 14 16 2-12 11 4 16-15-8-14 8 3-16-12-11 16-2 7-14Z" fill="#E0AA54"/>
+  <path d="M135 51c-5 16 5 25 0 38m155-37c-6 15 5 25-1 38" stroke="#86A17A" stroke-width="7" stroke-linecap="round"/>
+  <path d="m287 285 17 19-33 16-17-18 33-17Z" fill="#D1AA75" stroke="#684E43" stroke-width="5" stroke-linejoin="round"/>
+</svg>
