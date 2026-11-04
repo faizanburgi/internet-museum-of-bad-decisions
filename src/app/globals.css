@@ -307,3 +307,166 @@ body:has(.storybook-carousel)>.mobile-bar{display:none}
 body:not(:has(.storybook-carousel)){font-family:var(--font-dm-sans),"Segoe UI",sans-serif!important}
 body:not(:has(.storybook-carousel)) :is(button,input,textarea,select,.nav,.mobile-bar,.footer,.footer-nav,.footer-bottom,.breadcrumb,.eyebrow,.meta,.section-label,.page-intro,.form-field label,.form-field small,.check-row,.button,.small-button,.react-button,.toolbar,.department-count,.exhibit-number,.exhibit-category,.exhibit-story,.step-number,.admin-table,.notice,.success-box,.empty-state,.error,.stat-row){font-family:var(--font-dm-sans),"Segoe UI",sans-serif!important}
 body:not(:has(.storybook-carousel)) :is(h1,h2,h3,h4,h5,h6,.serif,.page-title,.brand,.brand-stamp,.quote-band blockquote){font-family:var(--font-fraunces),Georgia,serif!important}
+
+/* Classical gallery system: a restrained dark room, warm metal, and readable labels. */
+:root{--museum-night:#17120f;--museum-room:#211a15;--museum-panel:#2a211a;--museum-panel-raised:#33271f;--museum-ink:#f0e6d2;--museum-muted:#c1b39b;--museum-gold:#c6a36b;--museum-gold-bright:#e0c38b;--museum-rule:#6a5238;--museum-rust:#a9654d}
+html{background:var(--museum-night)}
+body{background:var(--museum-night);background-image:radial-gradient(ellipse at 50% -15%,#473321 0,transparent 54%),linear-gradient(180deg,#1b1511 0%,#17120f 60%,#1d1712 100%);color:var(--museum-ink)}
+body:has(.storybook-carousel){background:var(--museum-night);background-image:radial-gradient(ellipse at 50% -15%,#473321 0,transparent 54%),linear-gradient(180deg,#1b1511 0%,#17120f 60%,#1d1712 100%)}
+::selection{background:#c6a36b;color:#17120f}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline-color:var(--museum-gold-bright)}
+.site-header{background:#18130f;border-color:#725a3a;box-shadow:0 1px 0 #c6a36b20,0 10px 30px #0003}
+.brand{color:#e7d4af}
+.brand-stamp{color:var(--museum-gold);border-color:var(--museum-gold);box-shadow:inset 0 0 0 3px #18130f,inset 0 0 0 4px #c6a36b55}
+.nav{color:#d3c5ad}
+.nav a:hover{color:var(--museum-gold-bright)}
+.nav-cta{color:var(--museum-gold-bright);border-color:var(--museum-gold)}
+.nav-cta:hover{background:var(--museum-gold);color:var(--museum-night)}
+.mobile-bar{background:#1d1712;border-color:var(--museum-rule);color:#e4d5bb}
+.mobile-bar a:hover{color:var(--museum-gold-bright)}
+.footer{background:#120e0b;background-image:linear-gradient(135deg,#201710,#120e0b 65%);color:#e4d5bb;border-top:1px solid var(--museum-rule)}
+.footer-top{border-color:#c6a36b35}.footer-bottom{color:#b8a88f}.footer-nav a:hover{color:var(--museum-gold-bright)}
+.page-wrap{color:var(--museum-ink)}
+.page-title{color:#f0dfbf}
+.page-intro{color:#c9baa2}
+.page-intro p{color:inherit}
+.breadcrumb{color:#c6a36b}
+.eyebrow,.section-label,.meta,.toolbar .meta{color:#d0ad74}
+.text-link{color:#e5c991;border-color:#b78f54}
+.text-link:hover{color:#fff0d2;border-color:#e1c38a}
+.department{background:linear-gradient(145deg,#30251d,#241c16);border-color:#705a3e;color:#efe2ca;box-shadow:0 8px 22px #0002}
+.department:hover{border-color:var(--museum-gold);box-shadow:0 12px 26px #0004}
+.department-icon{color:var(--museum-gold)}
+.department h3{color:#f0dfbf}
+.department p,.department-count{color:#c2b39c}
+.exhibit-card{background:linear-gradient(145deg,#30251d,#241c16);border-color:#705a3e;color:var(--museum-ink);box-shadow:0 8px 22px #0003}
+.exhibit-card h3,.exhibit-card h3 a{color:#f0dfbf}
+.exhibit-card p{color:#d0c2aa}
+.card-foot{color:#bdae96;border-color:#6a5238}
+.recent-section{background:#1b1511;background-image:linear-gradient(180deg,#211913,#17120f)}
+.featured{background:#2a211a;border-color:#806745;box-shadow:0 16px 40px #0004}
+.featured-visual{background:radial-gradient(ellipse at 50% 68%,#57432d,#261d16 72%)}
+.featured-visual::before{border-color:#b8965e;background:repeating-linear-gradient(90deg,transparent 0 75px,#c6a36b20 76px 77px)}
+.featured-copy h3{color:#f0dfbf}.featured-copy p{color:#d0c2aa}.featured-foot{color:#bdae96}
+.plaque{background:#d7c29a;color:#2a1e14;border-color:#a9844d}
+.empty-state{background:#241c16;border-color:#816a4a;color:#d1c1a8}
+.empty-state strong{color:#f0dfbf}
+.toolbar{color:#d0c2aa}
+.toolbar select,.form-field textarea,.form-field input,.form-field select{background:#191410;border-color:#705a3e;color:#f0e6d2}
+.toolbar select option,.form-field select option{background:#191410;color:#f0e6d2}
+.button-dark{background:#b79155;color:#1a130d;border-color:#d0ad74}
+.button-dark:hover{background:#d0ad74;color:#17120f}
+.button-gold{background:#cfac70;color:#21180f}
+.button-outline{border-color:#c6a36b;color:#f0dfbf}
+.form-card{background:linear-gradient(145deg,#30251d,#241c16);border-color:#756044;box-shadow:0 15px 35px #0003;color:#eee2cc}
+.form-field label{color:#efe2ca}
+.form-field small{color:#c2b39c}
+.form-field textarea::placeholder,.form-field input::placeholder{color:#8e806d}
+.check-row{color:#d0c2aa}.check-row input{accent-color:#c6a36b}
+.notice{background:#3a2b1d;border-color:#cfad73;color:#e8d7b8}
+.success-box{background:#233025;border-color:#657d5c;color:#e0ead8}
+.error{color:#f0a397}
+.stat-row{color:#c7b79e}
+.exhibit-sheet{background:#292019;background-image:linear-gradient(145deg,#33271e,#221a15);border-color:#b18e55;box-shadow:0 18px 52px #0005,inset 0 0 0 7px #241b15,inset 0 0 0 8px #b28b5245;color:#f0e6d2}
+.exhibit-number,.exhibit-category{color:#d3b475}
+.exhibit-sheet h1{color:#f0dfbf}
+.exhibit-rule{background:#c6a36b}
+.exhibit-story{color:#eee2cc}
+.exhibit-meta{color:#c1b39b}
+.react-button{background:#30251d;border-color:#806745;color:#ead8b5}
+.react-button:hover{background:#493621;border-color:#d0ad74}
+.exhibit-actions+.status,.exhibit-page [role="status"]{color:#d0c2aa!important}
+.small-button{background:#30251d;border-color:#806745;color:#ead8b5}
+.small-button:hover{background:#493621;border-color:#d0ad74}
+.small-button.approve{background:#243026;border-color:#6d8a61;color:#dcebd4}
+.small-button.reject{background:#39221f;border-color:#9f6255;color:#f0d1c8}
+.admin-table{background:#211a15;color:#eee2cc}
+.admin-table th,.admin-table td{border-color:#5c4832;color:inherit}
+.admin-table th{color:#e0c38b}
+.about-copy{color:#e2d4bc}
+.about-sections section{border-color:#b18e55}
+.about-sections h2{color:#e0c38b!important}
+.about-curator blockquote{color:#f0dfbf}
+.page-wrap .page-intro h2{color:#e0c38b!important}
+.page-wrap .page-intro li{color:#d7c9b2}
+.dark-band{background:#120e0b;background-image:radial-gradient(ellipse at 75% 50%,#8563422d,transparent 50%)}
+.dark-band h2{color:#f0dfbf}.dark-band p{color:#d0c2aa}
+.quote-band{background:#211913;background-image:linear-gradient(135deg,#2c2117,#17120f);color:#f0dfbf}
+.quote-band blockquote{color:#f0dfbf}
+.step{border-color:#b18e55}.step h3{color:#f0dfbf}.step p{color:#cbbba2}.step-number{color:#d0ad74}
+.exhibit-page .breadcrumb a:hover{color:#f0dfbf}
+.admin-actions button,.admin-actions input,.admin-actions textarea{color:#eee2cc}
+
+/* Bring the carousel into the same quiet, classical gallery as interior pages. */
+.storybook-carousel{background:#1b1511;border-color:#705638;color:#f0e6d2}
+.storybook-carousel .storybook-room{background:#211a15;color:#f0e6d2}
+.storybook-carousel .storybook-room::before{border-color:#96754466}
+.storybook-carousel .storybook-room::after{background-image:radial-gradient(ellipse at 15% 25%,#5a432440,transparent 40%),radial-gradient(ellipse at 90% 90%,#7b5a2b20,transparent 48%)}
+.storybook-carousel .welcome-room{background-color:#1b1511;background-image:radial-gradient(ellipse at 76% 56%,#49321e88,transparent 45%),linear-gradient(120deg,#211811,#17120f 70%)}
+.storybook-carousel .storybook-kicker{color:#d0ad74}
+.storybook-carousel .welcome-copy h1{color:#f0dfbf}
+.storybook-carousel .welcome-copy>p,.storybook-carousel .room-intro p,.storybook-carousel .contribute-copy>p{color:#d0c2aa}
+.storybook-carousel .story-button-primary{background:#b79155;border-color:#d0ad74;color:#1c150e;box-shadow:2px 3px 0 #0006}
+.storybook-carousel .story-button-primary:hover{background:#d0ad74;box-shadow:3px 5px 0 #0006}
+.storybook-carousel .story-button-secondary{background:#2a211a;border-color:#90734a;color:#f0dfbf;box-shadow:2px 3px 0 #0005}
+.storybook-carousel .verdict-note{background:#241b14;border-color:#977646;color:#f0e6d2}
+.storybook-carousel .verdict-stamp{border-color:#c6a36b;color:#e0c38b}
+.storybook-carousel .verdict-note p{color:#f0dfbf}
+.storybook-carousel .verdict-note button{background:#33271f;border-color:#806745;color:#f0dfbf}
+.storybook-carousel .welcome-art{filter:saturate(.72) sepia(.12)}
+.storybook-carousel .archive-print{background:#30251d;border-color:#d6c29b;outline-color:#967544}
+.storybook-carousel .archive-print-globe figcaption{background:#1d1712ed;color:#e4d5bb}
+.storybook-carousel .welcome-ticket{background:#30251d;border-color:#b18e55;color:#f0dfbf;box-shadow:3px 5px 0 #0005}
+.storybook-carousel .welcome-ticket small{color:#d0ad74}
+.storybook-carousel .welcome-spark{color:#c7a36a}
+.storybook-carousel .room-number{color:#c6ac7e}
+.storybook-carousel .room-number i{color:#e0c38b}
+.storybook-carousel .room-intro h2,.storybook-carousel .contribute-copy h2{color:#f0dfbf}
+.storybook-carousel .feature-room,.storybook-carousel .departments-room,.storybook-carousel .arrivals-room,.storybook-carousel .contribute-room{background-color:#211a15}
+.storybook-carousel .storybook-feature{background:#2b2119;border-color:#806745;box-shadow:0 14px 35px #0005,4px 5px 0 #0004;transform:none}
+.storybook-carousel .feature-artwell{background:radial-gradient(ellipse at 50% 60%,#493821,#211a15)}
+.storybook-carousel .feature-artwell::before{border-color:#c6a36b88}
+.storybook-carousel .feature-number{background:#1d1712;border-color:#927342;color:#e0c38b}
+.storybook-carousel .feature-plaque{color:#f0e6d2}
+.storybook-carousel .plaque-kicker{color:#d0ad74}
+.storybook-carousel .feature-plaque h3,.storybook-carousel .storybook-empty h3{color:#f0dfbf}
+.storybook-carousel .feature-plaque>p,.storybook-carousel .storybook-empty p{color:#d0c2aa}
+.storybook-carousel .plaque-footer{border-color:#57432e;color:#c2b39c}
+.storybook-carousel .plaque-footer a{color:#e0c38b;border-color:#b18e55}
+.storybook-carousel .storybook-empty{background:#282019;border-color:#806745;color:#f0e6d2}
+.storybook-carousel .department-map-art{opacity:.13;filter:sepia(.6) brightness(.55)}
+.storybook-carousel .storybook-department{background:#2b2119;border-color:#705a3e;color:#f0e6d2;box-shadow:0 6px 16px #0003}
+.storybook-carousel .storybook-department:nth-child(n){transform:none}
+.storybook-carousel .storybook-department:hover{background:#3a2b1e;border-color:#c6a36b;box-shadow:0 10px 24px #0005}
+.storybook-carousel .department-doodle,.storybook-carousel .department-archive-art{background:#3d3022;color:#e0c38b}
+.storybook-carousel .department-tone-1 .department-doodle,.storybook-carousel .department-tone-2 .department-doodle,.storybook-carousel .department-tone-3 .department-doodle{background:#3d3022;color:#e0c38b}
+.storybook-carousel .department-title{color:#f0dfbf}
+.storybook-carousel .department-enter,.storybook-carousel .storybook-text-link{color:#e0c38b}
+.storybook-carousel .storybook-text-link{border-color:#b18e55}
+.storybook-carousel .arrivals-shelf-art{opacity:.16;filter:sepia(.6) brightness(.65)}
+.storybook-carousel .storybook-arrivals .exhibit-card,.storybook-carousel .storybook-arrivals .exhibit-card:nth-child(n){background:#2b2119;border-color:#705a3e;color:#f0e6d2;box-shadow:0 7px 18px #0004;transform:none}
+.storybook-carousel .storybook-arrivals .exhibit-card .meta{color:#d0ad74}
+.storybook-carousel .storybook-arrivals .exhibit-card h3{color:#f0dfbf}
+.storybook-carousel .storybook-arrivals .exhibit-card p{color:#d0c2aa}
+.storybook-carousel .storybook-arrivals .card-foot{color:#c2b39c;border-color:#57432e}
+.storybook-carousel .contribute-art{filter:sepia(.15) saturate(.7) brightness(.8)}
+.storybook-carousel .contribute-footnote{color:#c6ac7e}
+.storybook-carousel .contribute-footnote span+span::before{color:#d0ad74}
+.storybook-carousel .storybook-controls{background:#17120f;border-color:#705638;box-shadow:0 -8px 24px #0004}
+.storybook-carousel .story-arrow{background:#2a211a;border-color:#806745;color:#f0dfbf}
+.storybook-carousel .story-arrow:hover{background:#493621}
+.storybook-carousel .room-tab{color:#c1b39b}
+.storybook-carousel .room-tab.is-current{background:#33271f;border-color:#927342;color:#f0dfbf}
+.storybook-carousel .room-tab-number{color:#d0ad74}
+.storybook-carousel .storybook-count{color:#c6ac7e}
+.storybook-carousel .room-tabs{scrollbar-color:#806745 #211a15}
+body:has(.storybook-carousel)>.site-header{background:#18130f;border-color:#705638;box-shadow:0 1px 0 #c6a36b20,0 10px 30px #0003}
+body:has(.storybook-carousel)>.site-header .brand{color:#e7d4af}
+body:has(.storybook-carousel)>.site-header .brand-stamp{background:#18130f;border-color:#c6a36b;color:#e0c38b;box-shadow:inset 0 0 0 3px #18130f,inset 0 0 0 4px #c6a36b55}
+body:has(.storybook-carousel)>.site-header .nav{color:#d3c5ad}
+body:has(.storybook-carousel)>.site-header .nav a:hover{color:#f0dfbf}
+body:has(.storybook-carousel)>.site-header .nav-cta{background:#b79155;border-color:#d0ad74;color:#1c150e;box-shadow:2px 2px 0 #0005}
+body:has(.storybook-carousel)>.site-header .nav-cta:hover{background:#d0ad74;color:#17120f}
+@media(max-width:650px){.storybook-carousel .storybook-room{background:#211a15}.storybook-carousel .storybook-controls{background:#17120f}.storybook-carousel .storybook-arrivals .exhibit-card:nth-child(n){transform:none}}
+@media(prefers-reduced-motion:reduce){.storybook-carousel .storybook-room,.storybook-carousel .storybook-arrivals .exhibit-card{scroll-behavior:auto}}
+@media(min-width:651px){.storybook-carousel .welcome-room{grid-template-columns:1.08fr .92fr}.storybook-carousel .welcome-copy h1{font-size:clamp(44px,5.25vw,70px);line-height:.98;letter-spacing:-.055em;margin:15px 0 12px}.storybook-carousel .welcome-copy>p{font-size:15px;line-height:1.55}.storybook-carousel .welcome-copy .storybook-actions{margin-top:17px}.storybook-carousel .verdict-note{margin-top:19px}}
