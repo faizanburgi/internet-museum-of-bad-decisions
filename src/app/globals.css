@@ -470,3 +470,21 @@ body:has(.storybook-carousel)>.site-header .nav-cta:hover{background:#d0ad74;col
 @media(max-width:650px){.storybook-carousel .storybook-room{background:#211a15}.storybook-carousel .storybook-controls{background:#17120f}.storybook-carousel .storybook-arrivals .exhibit-card:nth-child(n){transform:none}}
 @media(prefers-reduced-motion:reduce){.storybook-carousel .storybook-room,.storybook-carousel .storybook-arrivals .exhibit-card{scroll-behavior:auto}}
 @media(min-width:651px){.storybook-carousel .welcome-room{grid-template-columns:1.08fr .92fr}.storybook-carousel .welcome-copy h1{font-size:clamp(44px,5.25vw,70px);line-height:.98;letter-spacing:-.055em;margin:15px 0 12px}.storybook-carousel .welcome-copy>p{font-size:15px;line-height:1.55}.storybook-carousel .welcome-copy .storybook-actions{margin-top:17px}.storybook-carousel .verdict-note{margin-top:19px}}
+
+/* Collection search, filters, and paging. */
+.collection-filters{display:grid;gap:17px;margin:28px 0 34px;padding:21px 23px;border:1px solid #725a3a;background:linear-gradient(145deg,#2a211a,#211a15);box-shadow:0 10px 26px #0003}
+.collection-filter-fields{display:grid;grid-template-columns:minmax(220px,1.6fr) minmax(170px,.8fr) minmax(160px,.7fr);gap:16px;align-items:end}
+.collection-filter-fields label{display:flex;flex-direction:column;gap:8px;color:#dfc896;font:700 10px/1.3 var(--font-dm-sans),"Segoe UI",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.collection-filter-fields input,.collection-filter-fields select{width:100%;min-height:44px;padding:10px 12px;border:1px solid #705a3e;border-radius:2px;background:#191410;color:#f0e6d2;font:400 14px/1.4 var(--font-dm-sans),"Segoe UI",sans-serif;letter-spacing:normal;text-transform:none}
+.collection-filter-fields input::placeholder{color:#96866f}.collection-filter-fields input:focus,.collection-filter-fields select:focus{border-color:#c6a36b}
+.collection-filter-actions{display:flex;align-items:center;gap:18px}.collection-filter-actions .button{min-height:42px;padding:11px 17px}
+.collection-departments{margin:30px 0 42px}.collection-departments>h2,.collection-results-heading h2{margin:0;color:#f0dfbf;font:clamp(26px,3vw,34px)/1.1 var(--font-fraunces),Georgia,serif}
+.collection-departments .department-grid{margin-top:18px}
+.collection-results-heading{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:28px 0 18px}
+.collection-result-count{margin:0;color:#c9baa2;font:12px/1.5 var(--font-dm-sans),"Segoe UI",sans-serif}
+.gallery-department-icon{display:inline-block;margin-top:25px;font-size:38px}
+.collection-pagination{display:flex;justify-content:center;align-items:center;gap:22px;margin:32px 0 8px;padding-top:20px;border-top:1px solid #6a5238;color:#cfbd9e;font:12px var(--font-dm-sans),"Segoe UI",sans-serif}
+.collection-pagination a{color:#e0c38b;border-bottom:1px solid #9d7948;padding:7px 2px}.collection-pagination a:hover{color:#fff0d2;border-color:#e0c38b}.collection-pagination [aria-current="page"]{color:#eee2cc}.collection-pagination [aria-disabled="true"]{color:#756754}
+.empty-state strong{font-family:var(--font-fraunces),Georgia,serif!important}
+@media(max-width:760px){.collection-filter-fields{grid-template-columns:1fr 1fr}.collection-filter-fields label:first-child{grid-column:1/-1}}
+@media(max-width:650px){.collection-filters{gap:14px;margin:22px 0 28px;padding:16px}.collection-filter-fields{grid-template-columns:1fr;gap:13px}.collection-filter-fields label:first-child{grid-column:auto}.collection-filter-actions{align-items:flex-start;flex-wrap:wrap}.collection-departments{margin:26px 0 34px}.collection-results-heading{align-items:flex-start;flex-direction:column;gap:5px;margin-top:24px}.collection-pagination{gap:14px;font-size:11px}}

@@ -57,3 +57,24 @@ test("museum departments and missing exhibit routes resolve correctly", async ({
   expect((await request.get("/api/og/not-a-real-exhibit")).status()).toBe(404);
   expect((await request.get("/api/certificate/not-a-real-exhibit")).status()).toBe(404);
 });
+
+test("collection search preserves shareable filters on museum and department pages", async ({ page }) => {
+  await page.goto("/museum");
+  await page.getByLabel("Search stories").fill("microwave disaster");
+  await page.getByLabel("Department").selectOption("kitchen-disasters");
+  await page.getByLabel("Sort by").selectOption("popular");
+  await page.getByRole("button", { name: "Find stories" }).click();
+  await expect(page).toHaveURL(/\/museum\?q=microwave\+disaster&category=kitchen-disasters&sort=popular/);
+  await expect(page.getByLabel("Search stories")).toHaveValue("microwave disaster");
+  await expect(page.getByLabel("Department")).toHaveValue("kitchen-disasters");
+  await expect(page.getByLabel("Sort by")).toHaveValue("popular");
+  await page.getByRole("link", { name: "Clear filters" }).click();
+  await expect(page).toHaveURL(/\/museum$/);
+
+  await page.goto("/gallery/kitchen-disasters");
+  await page.getByLabel("Search stories").fill("midnight cake");
+  await page.getByRole("button", { name: "Find stories" }).click();
+  await expect(page).toHaveURL(/\/gallery\/kitchen-disasters\?q=midnight\+cake&sort=recent/);
+  await expect(page.getByRole("heading", { name: "The Kitchen Disasters Wing" })).toBeVisible();
+  await expect(page.getByLabel("Search stories")).toHaveValue("midnight cake");
+});

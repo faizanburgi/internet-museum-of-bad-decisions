@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCallback, useState, type KeyboardEvent, type PointerEvent } from "react";
 import { ExhibitCard } from "@/components/exhibit-card";
 import type { Category } from "@/lib/categories";
-import type { Exhibit } from "@/lib/supabase";
+import type { PublicExhibit } from "@/lib/supabase";
 
 const rooms = ["Welcome", "Curator’s pick", "Departments", "New arrivals", "Contribute"];
 const curatorVerdicts = [
@@ -16,7 +16,7 @@ const curatorVerdicts = [
   "A small mistake with excellent museum energy."
 ];
 
-export function MuseumCarousel({ exhibits, categories }: { exhibits: Exhibit[]; categories: readonly Category[] }) {
+export function MuseumCarousel({ exhibits, categories }: { exhibits: PublicExhibit[]; categories: readonly Category[] }) {
   const [active, setActive] = useState(0);
   const [verdict, setVerdict] = useState(0);
   const [pointerStart, setPointerStart] = useState<number | null>(null);

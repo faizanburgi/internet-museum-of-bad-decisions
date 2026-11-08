@@ -9,7 +9,7 @@ Next.js App Router, TypeScript, Tailwind CSS v4, Supabase PostgreSQL and Auth, o
 ## Local setup
 
 1. Install Node.js 20.9 or newer.
-2. Create a Supabase project and apply `supabase/migrations/202610240001_initial.sql` in the SQL editor or with the Supabase CLI.
+2. Create a Supabase project and apply the SQL migrations in `supabase/migrations/` in filename order, including `202610240001_initial.sql` and `202611080001_story_discovery.sql`.
 3. In Supabase Auth, enable email/password sign-in. Create the first staff account from the Supabase dashboard, then add its UUID to `public.admin_roles` using the SQL editor:
 
    ```sql
@@ -41,12 +41,12 @@ Before the first browser test run, install Playwright's Chromium binary with `np
 2. Import the repository in Vercel; the Next.js framework preset is detected automatically.
 3. Add `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `RATE_LIMIT_SALT`, and `NEXT_PUBLIC_SITE_URL` to the Vercel Production environment. Add `OPENAI_API_KEY` only if AI curation is wanted.
 4. Deploy. No Docker, persistent filesystem, or background worker is required.
-5. Confirm the migration is applied, the administrator role row exists, and that Auth site URL/redirect URLs include the production domain.
-6. Smoke test: load the homepage and empty galleries; submit a story; confirm it is not public; sign in at `/admin/login`; edit and approve the story; open `/exhibit/<id>`; add a reaction; file a report; test the generated `/api/og/<id>` image; hide the exhibit and confirm public routes no longer expose it.
+5. Confirm all migrations are applied, the administrator role row exists, and that Auth site URL/redirect URLs include the production domain.
+6. Smoke test: load the homepage and empty galleries; submit a story; confirm it is not public; sign in at `/admin/login`; edit and approve the story; find it by its curated title; filter to its department; verify newest and most-reacted sorting; open `/exhibit/<id>`; add a reaction; file a report; test the generated `/api/og/<id>` image; hide the exhibit and confirm public routes no longer expose it.
 
 ## Security and moderation
 
-- Public reads use approved-only RLS; pending and rejected stories are not visible through the public database role.
+- Public SQL reads use approved-only RLS and column grants expose only curated exhibit fields; original submissions remain unavailable to the public database roles.
 - Writes are handled by server routes using the service-role secret. Never use that key in a `NEXT_PUBLIC_` variable or browser bundle.
 - Admin access requires a Supabase authenticated user plus a row in `admin_roles`; UI state, email, and editable user metadata do not grant access.
 - Anonymous submissions are validated, rate-limited in PostgreSQL, and checked for common email/phone patterns. This is a baseline filter, not a substitute for moderation. Review all submissions before approval.
