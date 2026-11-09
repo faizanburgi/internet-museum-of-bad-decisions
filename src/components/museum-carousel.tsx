@@ -66,7 +66,7 @@ export function MuseumCarousel({ exhibits, categories }: { exhibits: PublicExhib
             </div>
           </div>
           <div className="welcome-art" aria-hidden="true">
-            <Image className="museum-front-art" src="/art/storybook/museum-front.svg" alt="" fill priority sizes="(max-width: 700px) 90vw, 52vw" />
+            <Image className="museum-relic-art" src="/art/storybook/museum-relics.svg" alt="" fill priority sizes="(max-width: 700px) 90vw, 52vw" />
             <figure className="archive-print archive-print-globe"><Image src="/art/archives/globe-mapping-instruments.jpg" alt="" fill sizes="180px" /><figcaption>An old map for our many wrong turns</figcaption></figure>
             <span className="welcome-spark spark-one">✳</span><span className="welcome-spark spark-two">✴</span>
             <div className="welcome-ticket"><span>ADMIT ONE</span><b>to the gallery<br/>of “oh no”</b><small>NO REFUNDS ON REGRETS</small></div>
